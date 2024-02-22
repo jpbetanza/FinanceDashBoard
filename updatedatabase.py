@@ -8,9 +8,7 @@ Original file is located at
 """
 
 import os
-import numpy
 import pandas as pd
-import seaborn as sns
 # path = '/content/drive/MyDrive/Colab Notebooks/FinanceiroPessoal/extratos/'
 # root = '/content/drive/MyDrive/Colab Notebooks/FinanceiroPessoal/'
 
@@ -70,6 +68,5 @@ alldata["Categoria"] = alldata["Tipo"].map(map)
 alldata['Valor'] = alldata['Valor'].astype(str)
 alldata['Valor'] = alldata['Valor'].str.replace('.',',')
 
-investimentos = alldata[[alldata['Categoria']=="Investimento"]]
 
 alldata.to_csv(root+'alldata.csv',index=False, sep=';')
